@@ -1,0 +1,17 @@
+[
+  {
+    "job": "outbox:drain",
+    "expression": "* * * * *",
+    "lockTimeoutMs": 240000
+  },
+  {
+    "job": "uploads:pending:cleanup",
+    "expression": "15 * * * *",
+    "lockTimeoutMs": 900000
+  },
+  {
+    "job": "auth:sessions:cleanup",
+    "expression": "0 3 * * *",
+    "lockTimeoutMs": 240000
+  }
+]
